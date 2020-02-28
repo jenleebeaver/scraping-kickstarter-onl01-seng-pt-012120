@@ -17,7 +17,7 @@ def create_project_hash
     #is another hash with each of our other data points as keys
     title =
     project.css("h2.bbcard_name strong a").text
-    projects[project] = {}
+    projects[title.to_symb] = {}
   end
 
   #returns the project hash
