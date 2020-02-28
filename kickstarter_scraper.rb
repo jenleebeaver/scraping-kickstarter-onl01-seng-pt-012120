@@ -4,8 +4,8 @@ require "pry"
 def create_project_hash
 
   #below code was to grab data and use binding.pry to find within html
-  #html = File.read('fixtures/kickstarter.html')
-  #kickstarter = Nokogiri::HTML(html) #grabbing data with nokogiri
+  html = File.read('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html) #grabbing data with nokogiri
 
   projects = {}
 
@@ -17,9 +17,21 @@ def create_project_hash
     #is another hash with each of our other data points as keys
     title =
     project.css("h2.bbcard_name strong a").text
-    projects[title.to_symb] = {}
     #to_symb method converts the title into a symbol because symbols
     #make better hash keys than strings
+    projects[title.to_symb] = {
+      :image_link => 
+      project.css("div.project-thumbnail a img").attribute("src").value,
+      :description => 
+      project.css("p.bbcard_blurb").text,
+      :location => 
+      project.css("ul.project-meta span.location-name").text,
+      
+      
+      
+      
+    }
+    
   end
 
   #returns the project hash
