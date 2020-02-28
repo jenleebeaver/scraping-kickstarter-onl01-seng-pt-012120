@@ -13,7 +13,7 @@ def create_project_hash
 
   kickstarter.css("li.project.grid_4")
   .each do |project|
-    #below code makes it so each project title is a key and the value 
+    #below code makes it so each project title is a key and the value
     #is another hash with each of our other data points as keys
     title =
     project.css("h2.bbcard_name strong a"). text
