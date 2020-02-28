@@ -2,8 +2,10 @@ require "nokogiri"
 require "pry"
 
 def create_project_hash
-  html = File.read('fixtures/kickstarter.html')
-  kickstarter = Nokogiri::HTML(html) #grabbing data with nokogiri
+
+  #below code was to grab data and use binding.pry to find within html
+  #html = File.read('fixtures/kickstarter.html')
+  #kickstarter = Nokogiri::HTML(html) #grabbing data with nokogiri
 
   projects = {}
 
