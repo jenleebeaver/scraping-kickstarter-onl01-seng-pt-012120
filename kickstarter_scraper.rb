@@ -18,6 +18,7 @@ def create_project_hash
     title =
     project.css("h2.bbcard_name strong a").text
     projects[title.to_symb] = {}
+    #to_symb method converts the title into a symbol
   end
 
   #returns the project hash
