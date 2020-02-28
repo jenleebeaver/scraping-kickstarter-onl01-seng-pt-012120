@@ -20,18 +20,18 @@ def create_project_hash
     #to_symb method converts the title into a symbol because symbols
     #make better hash keys than strings
     projects[title.to_symb] = {
-      :image_link => 
+      :image_link =>
       project.css("div.project-thumbnail a img").attribute("src").value,
-      :description => 
+      :description =>
       project.css("p.bbcard_blurb").text,
-      :location => 
+      :location =>
       project.css("ul.project-meta span.location-name").text,
       
-      
-      
-      
+
+
+
     }
-    
+
   end
 
   #returns the project hash
