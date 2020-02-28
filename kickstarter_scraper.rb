@@ -17,9 +17,9 @@ def create_project_hash
     #is another hash with each of our other data points as keys
     title =
     project.css("h2.bbcard_name strong a").text
-    #to_symb method converts the title into a symbol because symbols
+    #to_sym method converts the title into a symbol because symbols
     #make better hash keys than strings
-    projects[title.to_symb] = {
+    projects[title.to_sym] = {
       :image_link =>
       project.css("div.project-thumbnail a img").attribute("src").value,
       :description =>
