@@ -13,6 +13,9 @@ def create_project_hash
 
   kickstarter.css("li.project.grid_4")
   .each do |project|
+    #below code makes it so each project title is a key
+    title =
+    project.css("h2.bbcard_name strong a"). text
     projects[project] = {}
   end
 
